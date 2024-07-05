@@ -17,7 +17,6 @@ spark = configure_spark_with_delta_pip(builder) \
         .config("spark.sql.shuffle.partitions", "200") \
         .config("spark.sql.debug.maxToStringFields", 1000).getOrCreate()
 
-# https://www.kaggle.com/datasets/arshkon/linkedin-job-postings?resource=download
 
 df = spark.read.csv("file/postings.csv", header=True)
 
